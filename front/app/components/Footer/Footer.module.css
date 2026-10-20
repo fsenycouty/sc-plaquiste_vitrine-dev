@@ -1,0 +1,164 @@
+/* Styles de Footer : identité, navigation secondaire et liens légaux. */
+.footerNavigation {
+  padding: 0 1.25rem 3rem;
+  background: var(--color-red-vivid);
+}
+
+.footerNavigationContainer,
+.footerBottomContainer {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+}
+
+.footerNavigationContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6em;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(255 255 255 / 25%);
+}
+
+.footerBrand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  width: 100%;
+}
+
+.footerBrand strong {
+  color: var(--color-white);
+  font-size: 1.15rem;
+  white-space: nowrap;
+}
+
+.logoBadge {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border: 2px solid var(--color-red);
+  border-radius: 50%;
+  background: var(--color-white);
+}
+
+.logoBadge img {
+  width: 84%;
+  height: 84%;
+  object-fit: contain;
+}
+
+.footerNavigationContainer nav {
+  width: 100%;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footerLinks li {
+  flex: none;
+}
+
+.footerLinks a {
+  color: var(--color-white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.labelLong {
+  display: none;
+}
+
+.labelShort {
+  display: inline;
+}
+
+.footerBottom {
+  padding: 1.1rem 1.25rem;
+  background: var(--color-black);
+  color: var(--color-text-muted);
+}
+
+.footerBottomContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8em;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
+  width: 100%;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.footerBottom a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+}
+
+@media (min-width: 540px) {
+  .footerNavigationContainer {
+    justify-content: space-between;
+  }
+
+  .footerBrand {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .footerNavigationContainer nav {
+    width: auto;
+  }
+
+  .footerLinks {
+    flex-wrap: wrap;
+    gap: 1em 1.2em;
+    width: auto;
+  }
+
+  .footerLinks a {
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .labelLong {
+    display: inline;
+  }
+
+  .labelShort {
+    display: none;
+  }
+
+  .footerBottomContainer {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .legalLinks {
+    width: auto;
+  }
+}

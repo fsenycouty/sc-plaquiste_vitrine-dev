@@ -1,0 +1,100 @@
+/* Styles de AboutSection : présentation et visuel de l'artisan. */
+.about {
+  background: var(--color-black);
+  padding-block: 3.5rem;
+}
+.about .container {
+  display: grid;
+  gap: 2.8rem;
+  align-items: center;
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.about__visual {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-card);
+  position: relative;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-card-dark) 0 18px,
+    var(--color-black) 18px 36px
+  );
+  border: 1px solid var(--color-border-dark);
+}
+.about__visual::after {
+  content: "Photo de l'artisan / chantier à intégrer";
+  position: absolute;
+  inset: auto 1.1em 1.1em auto;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-black);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  max-width: 220px;
+  text-align: right;
+}
+.about h2 {
+  color: var(--color-red-text);
+  font-size: 1.9rem;
+}
+.about__lead {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+.stats {
+  list-style: none;
+  margin: 2em 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+.stats li {
+  border-left: 3px solid var(--color-red);
+  padding-left: 0.8em;
+}
+.stats strong {
+  display: block;
+  font-size: 1.7rem;
+  color: var(--color-white);
+}
+.stats span {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+.section-divider {
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--color-red);
+  border-radius: 2px;
+  margin: 0.7em 0 1.1em;
+}
+.section-heading .section-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 860px) {
+  .about {
+    padding-block: 6rem;
+  }
+
+  .about .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about .container > div:first-child {
+    order: 2;
+  }
+}

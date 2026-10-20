@@ -1,0 +1,82 @@
+/* Styles de CalloutSection : bandeau d'appel à l'action et boutons. */
+.callout {
+  background: var(--color-red-vivid);
+  text-align: center;
+  padding-block: 3.5rem;
+}
+.callout h2 {
+  margin-bottom: 0.3em;
+}
+.callout .section-divider {
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.callout p {
+  color: #fce0e3;
+  max-width: 52ch;
+  margin: 0 auto 1.8em;
+}
+.callout__actions {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.section-divider {
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--color-red);
+  border-radius: 2px;
+  margin: 0.7em 0 1.1em;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.9em 1.8em;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.button:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+.button-light {
+  background: var(--color-white);
+  color: var(--color-red);
+}
+.button-light:hover {
+  background: #f2e9e9;
+}
+.button-outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.button-outline:hover {
+  border-color: var(--color-white);
+}
+@media (min-width: 860px) {
+  .callout {
+    padding-block: 6rem;
+  }
+}

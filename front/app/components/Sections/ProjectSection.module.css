@@ -1,0 +1,121 @@
+/* Styles de ProjectSection : cartes et galerie responsive. */
+.projects {
+  background: var(--color-charcoal);
+  padding-block: 3.5rem;
+}
+.projects h2 {
+  color: var(--color-red);
+}
+.project-card {
+  flex: 0 0 min(320px, 100%);
+  scroll-snap-align: start;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-card);
+  position: relative;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-card-dark) 0 16px,
+    var(--color-black) 16px 32px
+  );
+  border: 1px solid var(--color-border-dark);
+}
+.project-card span {
+  position: absolute;
+  left: 0.9em;
+  bottom: 0.9em;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.76rem;
+  padding: 0.4em 0.8em;
+  border-radius: var(--radius-pill);
+}
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.8em;
+}
+.section-divider {
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--color-red);
+  border-radius: 2px;
+  margin: 0.7em 0 1.1em;
+}
+.section-heading .section-divider {
+  margin-inline: auto;
+}
+.section-heading__lead {
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+.carousel {
+  position: relative;
+  margin-top: 2.6em;
+}
+.carousel__track {
+  display: flex;
+  gap: 1.4em;
+  overflow-x: auto;
+  padding: 0.3em 0.2em 1em;
+  margin: 0 -0.2em;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--color-red) transparent;
+  scrollbar-width: thin;
+}
+.carousel__arrow {
+  position: absolute;
+  top: 40%;
+  translate: 0 -50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-charcoal-light);
+  border: 1px solid var(--color-border-dark);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+.carousel__arrow svg {
+  width: 18px;
+  height: 18px;
+}
+.carousel__arrow:hover {
+  background: var(--color-red);
+}
+.carousel__arrow:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 2px;
+}
+.carousel__arrow--previous {
+  left: -6px;
+}
+.carousel__arrow--next {
+  right: -6px;
+}
+@media (min-width: 860px) {
+  .projects {
+    padding-block: 6rem;
+  }
+
+  .carousel {
+    padding-inline: 3em;
+  }
+}
+@media (max-width: 859px) {
+  .carousel__arrow {
+    display: none;
+  }
+}

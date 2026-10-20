@@ -3,6 +3,8 @@
  */
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -16,7 +18,12 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <a className="skip-link" href="#main-content">Aller au contenu</a>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

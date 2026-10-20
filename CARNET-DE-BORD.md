@@ -11,6 +11,10 @@
   page locale affiche SC Plaquiste.
 - Préparé une base HTML sémantique et son CSS mobile-first à partir de la maquette
   validée, pour faciliter la création progressive des composants React.
+- Retiré la marge intérieure du conteneur principal afin que la section d'accueil
+  puisse occuper toute la largeur sur mobile.
+- Adapté le CSS du Hero en mobile-first : badges défilants sur petit écran et
+  affichage centré sans défilement horizontal à partir de 48rem.
 
 ### À poursuivre
 

@@ -1,5 +1,4 @@
 /* Styles de départ de la page ; les sections seront ajoutées dans leurs modules CSS. */
 .page {
   min-height: 100vh;
-  padding: 1.5rem;
 }
